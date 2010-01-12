@@ -1,0 +1,83 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+
+<html>
+  <head>
+    <title>File Sync: Distributed Software Development Project</title> 
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+
+	<script>
+		var root = "/users/msingh4/pictures";
+
+		function settings() {
+			root = prompt("please specify a new root directory", root);
+			if (root!=null && root!="") {
+			  window.location = 'settings.html';	
+			}
+		}
+
+		function searchModified() {
+			date = prompt("please secify a date in mm/dd/yyyy format");
+			alert("search is currently not implemented");
+		}
+	</script>
+  </head>
+
+  <body>
+ 
+    <h2>File Sync: Distributed Software Development</h2>
+
+	<center>
+	<div id="box">		
+		<div class="header">
+			<form>
+				<div class="menu">
+					<ul>
+						<li><a href=""><span>File View</span></a></li>
+						<li><a href="javascript:settings()"><span>Settings</span></a></li>
+					</ul>
+				</div>
+				<div class="search">
+					Search Files <input type="text"/><button type="button" onClick="javascript:window.location='search.html'">OK</button>
+				</div>
+			</div>
+
+			<div class="main">
+				<table class="files">
+					<tr>
+						<th width="40px">&nbsp;</th>
+						<th>Name</th>
+						<th width="100px">Size</th>
+						<th width="100px">Modified (<a href="javascript:searchModified()" title="Search by modified date">search</a>)</th>
+					</tr>
+					<tr><th colspan="4"><hr/></th></tr>
+
+<!-- begin changes -->
+
+					<tr class="evenrow">
+						<td><img src="../../images/back.gif" /></td>
+						<td><a href="../../index.html">Parent Directory</a></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						
+					</tr>
+
+					<tr class="nofile">
+						<td colspan="4">No files in this directory</td>
+					</tr>
+
+				</table>
+			</div>
+
+<!-- end changed -->
+
+			<div class="footer">
+				<div class="upload">
+					Upload File <input type="file"/>
+					<button type="button" onClick="javascript:alert('Upload is Completed')">Upload</button>				
+				</div>
+			</form>
+		</div>		
+	</div>
+	</center>
+  </body>
+</html>

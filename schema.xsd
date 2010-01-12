@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- top level element Database -->
+
+<xs:element name="Database">
+  <xs:complexType>
+    <xs:sequence>
+
+	  <!-- Database has any number of User -->
+      <xs:element name="User" minOccurs="0" maxOccurs="unbounded">
+	      <xs:complexType>
+			<xs:sequence>
+
+			  <!-- User has Devices -->
+			  <xs:element name="Devices">
+				  <xs:complexType>
+				    <xs:sequence>
+
+					  <!-- Devices contain any number of Device -->
+					  <xs:element name="Device" minOccurs="0" maxOccurs="unbounded">
+						  <xs:complexType>
+						    <xs:sequence>
+
+							  <!-- Device has Name, OnlineStatus and FileList -->
+							  <xs:element name="Name" type="xs:string"/>
+
+							  <xs:element name="OnlineStatus">
+								  <xs:simpleType>
+								    <xs:restriction base="xs:string">
+									  <xs:enumeration value="online"/>
+									  <xs:enumeration value="offline"/>
+									</xs:restriction>
+								  </xs:simpleType>
+							  </xs:element>
+
+							  <xs:element name="FileList">
+							    <xs:complexType>
+								  <xs:sequence>
+
+								    <!-- FileList has any number of File -->
+								    <xs:element name="File" minOccurs="0" maxOccurs="unbounded">
+									  <xs:complexType>
+									    <xs:sequence>
+
+										  <!-- File has Path, Name, Deleted, Size, Backup and LastModified -->
+									      <xs:element name="Path">
+											<xs:simpleType>
+										      <!-- Path contains only {alphanum space - _ . /} -->
+										      <xs:restriction base="xs:string">
+											    <xs:pattern value="([a-z]|[A-Z]|[0-9]|\s|\-|_|\.|\/)*"/>
+											    <xs:whiteSpace value="preserve"/>
+											  </xs:restriction>
+										    </xs:simpleType>
+										  </xs:element>
+
+									      <xs:element name="Name">
+											<xs:simpleType>
+										      <!-- Name contains only {alphanum space - _ .} -->
+										      <xs:restriction base="xs:string">
+											    <xs:pattern value="([a-z]|[A-Z]|[0-9]|\s|\-|_|\.)*"/>
+											    <xs:whiteSpace value="preserve"/>
+											  </xs:restriction>
+										    </xs:simpleType>
+										  </xs:element>
+
+									      <xs:element name="Deleted">
+											<xs:simpleType>
+										      <!-- Deleted is "yes" or "no" -->
+											  <xs:restriction base="xs:string">
+											    <xs:enumeration value="yes"/>
+											    <xs:enumeration value="no"/>
+											  </xs:restriction>
+											</xs:simpleType>
+										  </xs:element>
+
+									      <xs:element name="Size" type="xs:unsignedLong"/>
+									      <xs:element name="Backup" type="xs:string"/>
+
+										  <!-- LastModified is stored as Java Date.getTime() value instead of date format -->
+									      <xs:element name="LastModified" type="xs:unsignedLong"/>
+									    </xs:sequence>
+									  </xs:complexType>
+									</xs:element>
+								  </xs:sequence>
+								</xs:complexType>
+							  </xs:element>
+							</xs:sequence>
+						  </xs:complexType>
+					  </xs:element>
+					</xs:sequence>
+				  </xs:complexType>
+			  </xs:element>
+			</xs:sequence>
+			
+			<!-- User has two mandatory attributes: name and local_rootdir -->
+
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="local_rootdir" use="required">
+			  <xs:simpleType>
+			    <!-- local_rootdir contains {alphanum space - _ . /} only -->
+			    <xs:restriction base="xs:string">
+			      <xs:pattern value="([a-z]|[A-Z]|[0-9]|\s|\-|_|\.|\/)*"/>
+			      <xs:whiteSpace value="preserve"/>
+			    </xs:restriction>
+			  </xs:simpleType>
+			</xs:attribute>
+		  </xs:complexType>
+	  </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+
+</xs:schema>

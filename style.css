@@ -1,0 +1,189 @@
+body {
+	margin-bottom: 4px;
+	margin-top: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+	background: #99bbff;
+}
+
+a {
+	color: #77aadd;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a img {
+	border: none;
+}
+
+a:hover {
+	color:#2763A5;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+h2 {
+	font-family: Times New Roman, serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #002299;
+	text-align: center;
+}
+
+#box {
+	width: 700px;
+	min-height: 400px;
+	margin: 0 auto;
+	margin-top: 30px;
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #002266;
+	border: 1px #2277ff solid;
+	background-color: #fff;
+}
+
+.header {
+	width: 700px;
+	height: 40px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-color: #4499ff;
+	margin: 0;
+}
+
+.main {
+	width: 675px;
+	min-height: 400px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	color: #666; 
+	font-family: Times New Roman, serif;
+}
+
+.footer {
+	width: 700px;
+	height: 40px;
+	float: bottom;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-color: #4499ff;
+	margin: 0;
+}
+
+.menu {
+	float: left;
+}
+
+.menu ul {
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 0px;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu span {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ffffff;
+	border-right: 1px #ffffff solid;
+}
+
+.menu a {
+	text-decoration: none;
+}
+
+.menu a:hover {
+	background-color: #000000;
+}
+
+.search {
+	float: right;
+	margin: 0;
+	height: 40px;
+	padding-top: 10px;
+	padding-right: 10px;
+	color: #0044bb;
+}
+
+.search input {
+	background-color: #99bbff;
+	border: 1px #2277ff solid;
+	color: #002266;
+	height: 20px;
+}
+
+.files {
+	width: 100%;
+}
+
+.files hr {
+	border: 1px #3377ff solid;
+}
+
+.files th {
+	color: #3377ff;
+	text-align: left;
+	font-size: 10px;
+}
+
+.files td {
+	color: #002266;
+	text-align: left;
+	font-size: 12px;
+}
+
+.files a {
+	color: #002266;
+}
+
+.oddrow {
+	background-color: #eeeeff;
+}
+
+.evenrow {
+	background-color: #ffffff;
+}
+
+.devicerow {
+	background-color: #88bbff;
+	//background-color: #ffffff;
+}
+
+.devicerow td {
+	color: #002266;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.nofile td {
+	color: #002266;
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+	padding-top: 100px;
+}
+
+.upload {
+	float: left;
+	margin: 0;
+	height: 40px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-right: 10px;
+	color: #0044bb;
+}
+
+.upload a {
+	text-decoration: none;
+}
+
+.upload input {
+	background-color: #99bbff;
+	border: 1px #2277ff solid;
+	color: #002266;
+	height: 20px;
+}
