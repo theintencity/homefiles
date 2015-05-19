@@ -5,4 +5,4 @@
 > Members: *mamtasingh05* (owner)  
 > License: [GNU GPL v3](http://www.gnu.org/licenses/gpl.html)  
 
-I developed this Java software as part of my distributed software development course at University of San Francisco.
+I (Mamta Singh) developed this Java software as part of my distributed software development course at University of San Francisco. Please see [README.doc](/README.doc) for details on this project.
